@@ -1,0 +1,25 @@
+LES DIFFERENTES JOINTURES
+
+1- INNER JOIN
+====> car_sale=# SELECT * FROM person JOIN car ON person.id_car=car.id_car;
+
+
+
+
+2- LEFT JOIN
+====> car_sale=# SELECT * FROM person LEFT JOIN car CAR car.id_car=person.id_car;
+
+
+2.1 LEFT JOIN qui n'affiche les personnes qui n'ont pas des voitures. Dans notre cas ici, nous avons constaté que toutes les personnes ont au moins une voiture, c'est-à-dire le resultat est null.
+=====>car_sale=# select * from person left join car on car.id_car=person.id_car WHERE car.* IS NULL;
+
+
+
+3- RIGHT JOIN
+====> car_sale=# select * from person right join car on car.id_car=person.id_car;
+
+
+
+
+
+
